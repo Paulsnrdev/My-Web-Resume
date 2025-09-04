@@ -1,0 +1,103 @@
+    /* Custom CSS for animations and effects */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+
+        #cursor {
+  display: inline-block;
+  animation: blink 1.4s infinite;
+  color: rgb(42, 40, 40);
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+
+/* Offset for sticky header (h-16 ≈ 4rem) */
+section { scroll-margin-top: 4rem; }
+
+
+/* Navbar Glassmorphism */
+nav {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  /* Changed from fixed to static so it scrolls naturally */
+  /* position: static !important;
+  z-index: 999; */
+  background: rgba(0, 0, 0, 0.5); /* translucent background */
+}
+
+/* No extra padding since navbar is no longer fixed */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav links - Desktop */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: white;
+  display: inline-block;
+}
+
+.nav-link:hover,
+.active-nav {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+}
+
+/* Mobile menu links */
+#mobile-menu {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mobile-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.mobile-link:hover {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+}
+
+
